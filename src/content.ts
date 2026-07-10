@@ -43,7 +43,7 @@ export const content = {
       primary: '立即下载',
       secondary: '查看 GitHub',
       mirror: '查看 Gitee',
-      note: 'Pre-1.0 alpha：适合开发者试用、反馈和参与共建。',
+      note: 'v0.9.0 Release Candidate：适合开发者试用、反馈和参与共建。',
       visualLabel: 'Gate Dashboard 真实截图',
     },
     trust: ['Rust Powered', 'Self Hosted', 'Open Source', 'Cross Platform', 'Secure Tunnel'],
@@ -165,9 +165,9 @@ export const content = {
     },
     changelog: {
       title: '更新日志',
-      lead: '保持开源项目透明度，记录功能、文档、自动化和运行时进展。',
+      lead: '保持开源项目透明度，记录每次发布的变更。',
       items: [
-        { version: 'Unreleased', body: '仓库结构、双语 README、文档、社区模板、Docker 与 VitePress 文档脚手架。' },
+        { version: '0.9.0 · Release Candidate', body: '发布工程：重整公开文档（用户/开发/内部参考）、重建中英文 README、统一 Cargo/npm/Tauri 版本至 0.9.0、准备 Tauri 多平台打包目标、扩展 GitHub Actions 自动化（服务端二进制/桌面安装包/Docker 镜像/GitHub Release 草稿）、添加 npm typecheck/build 代理脚本。清理：移除本地构建输出/依赖缓存/IDE 文件/日志和占位资源；移除 Beta 冲刺报告/未来规划草案/一次性验证报告；重命名非英文资源文件名。兼容性：本次发布清理不包含隧道数据面、TCP/HTTP/HTTPS 运行时、协议、数据库或业务逻辑变更。' },
         { version: '0.1.0 · 2026-07-06', body: '初始化 Rust workspace、桌面客户端、服务端运行时、通信、认证、心跳和监控基础。' },
       ],
     },
@@ -207,7 +207,7 @@ export const content = {
       primary: 'Download',
       secondary: 'View GitHub',
       mirror: 'View Gitee',
-      note: 'Pre-1.0 alpha: ready for developer trials, feedback, and contributions.',
+      note: 'v0.9.0 Release Candidate: ready for developer trials, feedback, and contributions.',
       visualLabel: 'Real Gate Dashboard screenshot',
     },
     trust: ['Rust Powered', 'Self Hosted', 'Open Source', 'Cross Platform', 'Secure Tunnel'],
@@ -329,9 +329,9 @@ export const content = {
     },
     changelog: {
       title: 'Changelog',
-      lead: 'Keep open-source progress visible across features, docs, automation, and runtime foundations.',
+      lead: 'Keep open-source releases transparent with detailed change records.',
       items: [
-        { version: 'Unreleased', body: 'Repository structure, bilingual README, docs, community templates, Docker, and VitePress docs scaffold.' },
+        { version: '0.9.0 · Release Candidate', body: 'Release engineering: reorganized public docs (user/dev/internal), rebuilt bilingual READMEs, unified Cargo/npm/Tauri versions to 0.9.0, prepared Tauri bundle targets for Windows/macOS/Linux, expanded GitHub Actions automation (server binaries, desktop installers, Docker images, draft GitHub Releases), added npm proxy scripts for typecheck/build. Cleanup: removed local build output, dependency caches, IDE files, logs, and placeholder resources; removed beta sprint reports, future-plan drafts, and one-off validation reports; renamed non-English resource filenames to release-safe names. Compatibility: no tunnel data-plane, runtime, protocol, database, or business-logic changes included in this release cleanup.' },
         { version: '0.1.0 · 2026-07-06', body: 'Initial Rust workspace, desktop client, server runtime, communication, authentication, heartbeat, and monitoring foundations.' },
       ],
     },

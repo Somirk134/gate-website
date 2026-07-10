@@ -43,7 +43,7 @@ type ScreenshotKey = 'dashboard' | 'tunnel' | 'logs';
 type GithubState = 'loading' | 'ready' | 'error';
 
 const locale = ref<Locale>('zh-CN');
-const theme = ref<Theme>('dark');
+const theme = ref<Theme>('light');
 const menuOpen = ref(false);
 const downloadDialogOpen = ref(false);
 const activeScreenshot = ref<ScreenshotKey>('dashboard');
@@ -208,7 +208,6 @@ onUnmounted(() => {
         <a href="#home" @click="menuOpen = false">{{ t.nav.home }}</a>
         <a href="#features" @click="menuOpen = false">{{ t.nav.features }}</a>
         <a href="#docs" @click="menuOpen = false">{{ t.nav.docs }}</a>
-        <a href="#deploy" @click="menuOpen = false">{{ t.nav.deploy }}</a>
         <a href="#changelog" @click="menuOpen = false">{{ t.nav.changelog }}</a>
       </nav>
 
@@ -221,10 +220,10 @@ onUnmounted(() => {
           <BrandIcon :icon="brandIcons.gitee" :size="18" />
           <span>{{ t.nav.gitee }}</span>
         </a>
-        <button class="primary-button compact" type="button" @click="openDownloadDialog">
-          <Download :size="18" aria-hidden="true" />
-          <span>{{ t.nav.download }}</span>
-        </button>
+        <a class="primary-button compact stars-button" :href="repoUrl" target="_blank" rel="noreferrer">
+          <BrandIcon :icon="brandIcons.github" :size="18" />
+          <span>{{ githubStarsLabel }}</span>
+        </a>
         <button class="icon-button" type="button" :aria-label="t.controls.language" @click="setLocale(oppositeLocale)">
           <Languages :size="18" aria-hidden="true" />
           <span>{{ localeButtonLabel }}</span>
@@ -257,10 +256,10 @@ onUnmounted(() => {
               <span v-for="protocol in t.hero.protocols" :key="protocol">{{ protocol }}</span>
             </div>
             <div class="hero-actions">
-              <button class="primary-button" type="button" @click="openDownloadDialog">
-                <Download :size="20" aria-hidden="true" />
-                <span>{{ t.hero.primary }}</span>
-              </button>
+              <a class="primary-button" :href="repoUrl" target="_blank" rel="noreferrer">
+                <BrandIcon :icon="brandIcons.github" :size="20" />
+                <span>{{ githubStarsLabel }}</span>
+              </a>
               <a class="secondary-button brand-button github-button" :href="repoUrl" target="_blank" rel="noreferrer">
                 <BrandIcon :icon="brandIcons.github" :size="20" />
                 <span>{{ t.hero.secondary }}</span>
@@ -371,26 +370,6 @@ onUnmounted(() => {
           <figure class="screenshot-frame">
             <img :src="activeScreenshotSrc" :alt="t.screenshots.tabs[activeScreenshot]" />
           </figure>
-        </div>
-      </section>
-
-      <section id="download" class="section band">
-        <div class="container section-heading">
-          <p class="eyebrow">Download</p>
-          <h2>{{ t.download.title }}</h2>
-          <p>{{ t.download.lead }}</p>
-        </div>
-
-        <div class="container platform-grid">
-          <article v-for="platform in t.download.platforms" :key="platform.name" class="platform-card">
-            <Boxes :size="28" aria-hidden="true" />
-            <h3>{{ platform.name }}</h3>
-            <span class="status-pill">{{ platform.status }}</span>
-            <button class="platform-action" type="button" @click="openDownloadDialog">
-              {{ platform.action }}
-              <ArrowRight :size="16" aria-hidden="true" />
-            </button>
-          </article>
         </div>
       </section>
 

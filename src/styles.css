@@ -840,8 +840,31 @@ code {
 
 .site-footer {
   border-top: 1px solid var(--line);
-  padding: 34px 0;
-  background: var(--surface);
+  padding: 56px 0;
+  background:
+    linear-gradient(180deg, var(--surface), var(--surface-strong));
+  text-align: center;
+}
+
+.footer-grid {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.footer-grid .brand {
+  justify-content: center;
+}
+
+.footer-grid p {
+  margin: 14px 0 0;
+  font-size: 15px;
+  max-width: 480px;
+}
+
+.footer-grid nav {
+  margin-top: 24px;
+  justify-content: center;
 }
 
 .modal-backdrop {
