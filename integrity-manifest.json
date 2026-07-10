@@ -30,9 +30,9 @@
     "sri": "sha256-Vlvpv0l7KUfLfBhJXqhYYnoQsQ5LcalsLI0p7PKtSOs="
   },
   "/assets/screenshots/dashboard.png": {
-    "bytes": 28680,
-    "sha256": "uba9xl5QHlSJBc7FfmYWfK4YJbIK/SvS6PFUFAWGXiM=",
-    "sri": "sha256-uba9xl5QHlSJBc7FfmYWfK4YJbIK/SvS6PFUFAWGXiM="
+    "bytes": 106270,
+    "sha256": "M9WnZkS/h+f390GxEjWJ+peuIrZNk+C4/4YdfwcnGAA=",
+    "sri": "sha256-M9WnZkS/h+f390GxEjWJ+peuIrZNk+C4/4YdfwcnGAA="
   },
   "/assets/screenshots/hero.png": {
     "bytes": 42516,
@@ -40,9 +40,9 @@
     "sri": "sha256-6vl5Fkk1DC9r4OiDazN6Gm3PEQWshSYQbkJqx6UWlDg="
   },
   "/assets/screenshots/log-center.png": {
-    "bytes": 17360,
-    "sha256": "jlcx0DzzeGqEo2LqlDjV13HL2XaVHxC+T0+MkNwjOmA=",
-    "sri": "sha256-jlcx0DzzeGqEo2LqlDjV13HL2XaVHxC+T0+MkNwjOmA="
+    "bytes": 142354,
+    "sha256": "uLkGdDcYJE1cE5r4b6z1JKf8UvjWWI1gJC7eQxTnWG4=",
+    "sri": "sha256-uLkGdDcYJE1cE5r4b6z1JKf8UvjWWI1gJC7eQxTnWG4="
   },
   "/assets/screenshots/settings.png": {
     "bytes": 16202,
@@ -50,9 +50,9 @@
     "sri": "sha256-OsmyqS8OE+coLRj/LFZ8n+fl+YtoE6q+oaDYcwuGqV8="
   },
   "/assets/screenshots/tunnel.png": {
-    "bytes": 23928,
-    "sha256": "uxCsK0Lr/5MH5L8uzWHsQduZD2cCzwwDcSLeLVhizB0=",
-    "sri": "sha256-uxCsK0Lr/5MH5L8uzWHsQduZD2cCzwwDcSLeLVhizB0="
+    "bytes": 118653,
+    "sha256": "cC0gq7/kHZrYwK0rAWRFYjMYgQnYQpgDVG4j9xDWxVc=",
+    "sri": "sha256-cC0gq7/kHZrYwK0rAWRFYjMYgQnYQpgDVG4j9xDWxVc="
   },
   "/index.html": {
     "bytes": 1190,
