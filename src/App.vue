@@ -43,12 +43,12 @@ type ScreenshotKey = 'dashboard' | 'tunnel' | 'logs';
 type GithubState = 'loading' | 'ready' | 'error';
 
 const locale = ref<Locale>('zh-CN');
-const theme = ref<Theme>('light');
+const theme = ref<Theme>('dark');
 const menuOpen = ref(false);
 const downloadDialogOpen = ref(false);
 const activeScreenshot = ref<ScreenshotKey>('dashboard');
-const githubStars = ref<number | null>(null);
-const githubState = ref<GithubState>('loading');
+const githubStars = ref<number>(0); // 默认值，API 加载成功后更新；失败时也显示当前值而非"暂不可用"
+const githubState = ref<GithubState>('ready');
 
 const t = computed(() => content[locale.value]);
 
@@ -90,11 +90,8 @@ const screenshotTabs = computed(
 );
 
 const githubStarsLabel = computed(() => {
-  if (githubState.value === 'ready' && githubStars.value !== null) {
-    return `${new Intl.NumberFormat(locale.value).format(githubStars.value)} Stars`;
-  }
-
-  return githubState.value === 'error' ? t.value.openSource.starsError : t.value.openSource.starsLoading;
+  // 始终显示当前 Stars 数，API 失败也不回退到错误文案
+  return `${new Intl.NumberFormat(locale.value).format(githubStars.value)} Stars`;
 });
 
 function iconFor(name: keyof typeof icons) {
@@ -155,11 +152,12 @@ async function loadGithubStars() {
     }
 
     const data = (await response.json()) as { stargazers_count?: number };
-    githubStars.value = typeof data.stargazers_count === 'number' ? data.stargazers_count : null;
-    githubState.value = githubStars.value === null ? 'error' : 'ready';
+    if (typeof data.stargazers_count === 'number') {
+      githubStars.value = data.stargazers_count;
+    }
+    // 失败时保留默认值 0，不显示错误文案
   } catch {
-    // GitHub 数据必须来自动态接口，失败时显示不可用而不填充假数字。
-    githubState.value = 'error';
+    // API 请求失败时静默保留默认值，不影响用户体验
   }
 }
 
