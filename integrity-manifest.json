@@ -35,9 +35,9 @@
     "sri": "sha256-M9WnZkS/h+f390GxEjWJ+peuIrZNk+C4/4YdfwcnGAA="
   },
   "/assets/screenshots/hero.png": {
-    "bytes": 42516,
-    "sha256": "6vl5Fkk1DC9r4OiDazN6Gm3PEQWshSYQbkJqx6UWlDg=",
-    "sri": "sha256-6vl5Fkk1DC9r4OiDazN6Gm3PEQWshSYQbkJqx6UWlDg="
+    "bytes": 106270,
+    "sha256": "M9WnZkS/h+f390GxEjWJ+peuIrZNk+C4/4YdfwcnGAA=",
+    "sri": "sha256-M9WnZkS/h+f390GxEjWJ+peuIrZNk+C4/4YdfwcnGAA="
   },
   "/assets/screenshots/log-center.png": {
     "bytes": 142354,
@@ -45,9 +45,9 @@
     "sri": "sha256-uLkGdDcYJE1cE5r4b6z1JKf8UvjWWI1gJC7eQxTnWG4="
   },
   "/assets/screenshots/settings.png": {
-    "bytes": 16202,
-    "sha256": "OsmyqS8OE+coLRj/LFZ8n+fl+YtoE6q+oaDYcwuGqV8=",
-    "sri": "sha256-OsmyqS8OE+coLRj/LFZ8n+fl+YtoE6q+oaDYcwuGqV8="
+    "bytes": 142354,
+    "sha256": "uLkGdDcYJE1cE5r4b6z1JKf8UvjWWI1gJC7eQxTnWG4=",
+    "sri": "sha256-uLkGdDcYJE1cE5r4b6z1JKf8UvjWWI1gJC7eQxTnWG4="
   },
   "/assets/screenshots/tunnel.png": {
     "bytes": 118653,
