@@ -74,11 +74,13 @@ const brandIcons = {
   gitee: siGitee,
 };
 
+// 使用 BASE_URL 确保子路径部署（如 /gate-website/）时资源路径正确
+const B = import.meta.env.BASE_URL;
 const screenshotSources: Record<ScreenshotKey, string> = {
-  dashboard: '/assets/screenshots/dashboard.png',
-  tunnel: '/assets/screenshots/tunnel.png',
-  logs: '/assets/screenshots/log-center.png',
-  settings: '/assets/screenshots/settings.png',
+  dashboard: `${B}assets/screenshots/dashboard.png`,
+  tunnel: `${B}assets/screenshots/tunnel.png`,
+  logs: `${B}assets/screenshots/log-center.png`,
+  settings: `${B}assets/screenshots/settings.png`,
 };
 
 const activeScreenshotSrc = computed(() => screenshotSources[activeScreenshot.value]);
@@ -194,7 +196,7 @@ onUnmounted(() => {
   <div class="site-shell">
     <header class="site-header">
       <a class="brand" href="#home" aria-label="Gate home" @click="menuOpen = false">
-        <img src="/assets/branding/logo.svg" alt="Gate" />
+        <img :src="`${B}assets/branding/logo.svg`" alt="Gate" />
         <span>Gate</span>
       </a>
 
@@ -278,7 +280,7 @@ onUnmounted(() => {
               <span></span>
               <span></span>
             </div>
-            <img src="/assets/screenshots/hero.png" :alt="t.hero.visualLabel" />
+            <img :src="`${B}assets/screenshots/hero.png`" :alt="t.hero.visualLabel" />
           </figure>
         </div>
 
@@ -474,7 +476,7 @@ onUnmounted(() => {
       <div class="container footer-grid">
         <div>
           <a class="brand" href="#home">
-            <img src="/assets/branding/logo.svg" alt="Gate" />
+            <img :src="`${B}assets/branding/logo.svg`" alt="Gate" />
             <span>Gate</span>
           </a>
           <p>{{ t.footer.tagline }}</p>
