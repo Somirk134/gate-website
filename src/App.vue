@@ -39,7 +39,7 @@ import {
 } from './content';
 
 type Theme = 'dark' | 'light';
-type ScreenshotKey = 'dashboard' | 'tunnel' | 'logs' | 'settings';
+type ScreenshotKey = 'dashboard' | 'tunnel' | 'logs';
 type GithubState = 'loading' | 'ready' | 'error';
 
 const locale = ref<Locale>('zh-CN');
@@ -80,7 +80,6 @@ const screenshotSources: Record<ScreenshotKey, string> = {
   dashboard: `${B}assets/screenshots/dashboard.png`,
   tunnel: `${B}assets/screenshots/tunnel.png`,
   logs: `${B}assets/screenshots/log-center.png`,
-  settings: `${B}assets/screenshots/settings.png`,
 };
 
 const activeScreenshotSrc = computed(() => screenshotSources[activeScreenshot.value]);

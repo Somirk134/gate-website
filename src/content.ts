@@ -125,7 +125,6 @@ export const content = {
         dashboard: 'Dashboard',
         tunnel: 'Tunnel',
         logs: 'Logs',
-        settings: 'Settings',
       },
     },
     download: {
@@ -290,7 +289,6 @@ export const content = {
         dashboard: 'Dashboard',
         tunnel: 'Tunnel',
         logs: 'Logs',
-        settings: 'Settings',
       },
     },
     download: {
